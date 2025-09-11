@@ -1,0 +1,273 @@
+/* Library Page Specific Styles */
+
+/* Library Hero */
+.library-hero {
+  padding: 120px 0 80px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+}
+
+/* Archive Section */
+.archive-section {
+  padding: var(--section-padding);
+}
+
+.season-archive {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.season-card {
+  margin-bottom: 4rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.season-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.season-header {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.season-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.season-card:hover .season-banner {
+  transform: scale(1.05);
+}
+
+.season-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 2rem;
+  color: var(--text-white);
+}
+
+.season-title {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 0.5rem;
+}
+
+.season-theme {
+  font-size: 1.25rem;
+  color: var(--primary-red);
+  font-weight: var(--font-weight-medium);
+}
+
+.season-content {
+  padding: 2rem;
+}
+
+.season-article h3 {
+  font-size: 1.75rem;
+  color: var(--text-white);
+  margin-bottom: 1rem;
+}
+
+.article-meta {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.article-meta span {
+  color: var(--text-light-gray);
+  font-size: 0.9rem;
+}
+
+.date {
+  color: var(--accent-gold) !important;
+}
+
+.participants {
+  color: var(--primary-red) !important;
+}
+
+.season-article p {
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.highlights {
+  background-color: rgba(165, 28, 48, 0.1);
+  border-left: 4px solid var(--primary-red);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.highlights h4 {
+  color: var(--text-white);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.highlights ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlights li {
+  color: var(--text-gray);
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.highlights li::before {
+  content: "→";
+  color: var(--primary-red);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Gallery Section */
+.season-gallery {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-gray);
+}
+
+.season-gallery h4 {
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Resources Section */
+.resources-section {
+  padding: var(--section-padding);
+  background-color: var(--darker-bg);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.resource-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.resource-card h3 {
+  color: var(--text-white);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.resource-card p {
+  color: var(--text-gray);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.resource-link {
+  color: var(--primary-red);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+  color: #8b1a2b;
+}
+
+/* Responsive Design for Library Page */
+@media (max-width: 768px) {
+  .season-title {
+    font-size: 2rem;
+  }
+
+  .season-theme {
+    font-size: 1.1rem;
+  }
+
+  .season-content {
+    padding: 1.5rem;
+  }
+
+  .article-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .season-title {
+    font-size: 1.75rem;
+  }
+
+  .season-overlay {
+    padding: 1.5rem;
+  }
+
+  .season-content {
+    padding: 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlights {
+    padding: 1rem;
+  }
+}
