@@ -122,9 +122,14 @@
 .stats-section {
   padding: var(--section-padding);
   background:
-    radial-gradient(600px 300px at 20% 30%, rgba(119, 10, 241, 0.20), transparent 60%),
-    radial-gradient(500px 260px at 80% 50%, rgba(230, 7, 126, 0.20), transparent 60%),
-    linear-gradient(180deg, rgba(16, 13, 82, 0.6), rgba(16, 13, 82, 0.2));
+    radial-gradient(800px 400px at 10% 20%, rgba(230, 7, 126, 0.35), transparent 70%),
+    radial-gradient(600px 300px at 30% 10%, rgba(230, 6, 125, 0.25), transparent 65%),
+    radial-gradient(700px 350px at 80% 40%, rgba(231, 7, 127, 0.30), transparent 60%),
+    radial-gradient(500px 250px at 90% 70%, rgba(228, 6, 124, 0.20), transparent 55%),
+    radial-gradient(700px 350px at 70% 60%, rgba(255, 215, 0, 0.16), transparent 65%),
+    radial-gradient(600px 300px at 20% 80%, rgba(80, 18, 104, 0.30), transparent 65%),
+    radial-gradient(500px 250px at 70% 90%, rgba(40, 16, 94, 0.25), transparent 60%),
+    linear-gradient(180deg, rgba(16, 13, 82, 0.4), rgba(16, 13, 82, 0.1));
 }
 
 .stats-grid {
@@ -238,9 +243,15 @@
 .programs-section {
   padding: var(--section-padding);
   background:
-    radial-gradient(700px 320px at 70% 20%, rgba(119, 10, 241, 0.20), transparent 60%),
-    radial-gradient(600px 280px at 15% 70%, rgba(230, 7, 126, 0.18), transparent 60%),
-    linear-gradient(180deg, rgba(34, 0, 77, 0.6), rgba(16, 13, 82, 0.2));
+    radial-gradient(900px 450px at 15% 15%, rgba(230, 7, 126, 0.40), transparent 70%),
+    radial-gradient(700px 350px at 35% 5%, rgba(230, 6, 125, 0.30), transparent 65%),
+    radial-gradient(800px 400px at 75% 25%, rgba(231, 7, 127, 0.25), transparent 60%),
+    radial-gradient(600px 300px at 85% 60%, rgba(228, 6, 124, 0.20), transparent 55%),
+    radial-gradient(800px 400px at 65% 70%, rgba(255, 215, 0, 0.16), transparent 65%),
+    radial-gradient(700px 350px at 20% 75%, rgba(80, 18, 104, 0.35), transparent 65%),
+    radial-gradient(600px 300px at 80% 85%, rgba(40, 16, 94, 0.30), transparent 60%),
+    radial-gradient(500px 250px at 50% 95%, rgba(16, 13, 82, 0.40), transparent 55%),
+    linear-gradient(180deg, rgba(34, 0, 77, 0.3), rgba(16, 13, 82, 0.1));
 }
 
 .programs-grid {
@@ -340,9 +351,15 @@
 .blog-section {
   padding: var(--section-padding);
   background:
-    radial-gradient(650px 300px at 15% 35%, rgba(230, 7, 126, 0.22), transparent 60%),
-    radial-gradient(600px 280px at 85% 65%, rgba(82, 18, 105, 0.25), transparent 60%),
-    linear-gradient(180deg, rgba(16, 13, 82, 0.6), rgba(16, 13, 82, 0.2));
+    radial-gradient(800px 400px at 5% 25%, rgba(230, 7, 126, 0.45), transparent 70%),
+    radial-gradient(600px 300px at 25% 10%, rgba(230, 6, 125, 0.35), transparent 65%),
+    radial-gradient(700px 350px at 75% 35%, rgba(231, 7, 127, 0.30), transparent 60%),
+    radial-gradient(500px 250px at 90% 65%, rgba(228, 6, 124, 0.25), transparent 55%),
+    radial-gradient(700px 350px at 65% 70%, rgba(255, 215, 0, 0.18), transparent 65%),
+    radial-gradient(600px 300px at 15% 80%, rgba(80, 18, 104, 0.40), transparent 65%),
+    radial-gradient(500px 250px at 85% 90%, rgba(40, 16, 94, 0.35), transparent 60%),
+    radial-gradient(400px 200px at 50% 95%, rgba(16, 13, 82, 0.50), transparent 55%),
+    linear-gradient(180deg, rgba(16, 13, 82, 0.4), rgba(16, 13, 82, 0.1));
 }
 
 .blog-grid {
@@ -511,8 +528,21 @@
   justify-content: center;
   align-items: center;
   gap: var(--space-lg);
-  background-color: var(--darker-bg);
+  background:
+    radial-gradient(1400px 700px at 5% 15%, rgba(230, 7, 126, 0.45), transparent 70%),
+    radial-gradient(1000px 500px at 25% 5%, rgba(230, 6, 125, 0.35), transparent 65%),
+    radial-gradient(800px 400px at 75% 25%, rgba(231, 7, 127, 0.30), transparent 60%),
+    radial-gradient(600px 300px at 90% 60%, rgba(228, 6, 124, 0.25), transparent 55%),
+    radial-gradient(900px 450px at 65% 60%, rgba(255, 215, 0, 0.18), transparent 65%),
+    radial-gradient(1200px 600px at 15% 85%, rgba(80, 18, 104, 0.40), transparent 70%),
+    radial-gradient(900px 450px at 85% 80%, rgba(40, 16, 94, 0.35), transparent 65%),
+    radial-gradient(700px 350px at 50% 95%, rgba(16, 13, 82, 0.50), transparent 60%),
+    radial-gradient(1000px 500px at 60% 40%, rgba(81, 17, 104, 0.30), transparent 65%),
+    radial-gradient(800px 400px at 40% 70%, rgba(82, 18, 105, 0.25), transparent 60%),
+    linear-gradient(135deg, #22004c 0%, #100d52 50%, #28105e 100%);
   z-index: 9999;
+  padding: var(--space-lg);
+  box-sizing: border-box;
 }
 
 .splash-container .logo {
@@ -522,10 +552,13 @@
 
 .text-container {
   display: flex;
-  font-size: clamp(40px, 8vw, 80px); /* Made responsive */
+  font-size: clamp(32px, 6vw, 70px); /* Reduced size to prevent clipping */
   font-family: "Fredoka One", sans-serif;
   color: var(--text-white);
-  gap: 0.2em;
+  gap: 0.15em;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 90vw;
 }
 
 .text-container span {
@@ -572,14 +605,17 @@
   .splash-container {
     flex-direction: column;
     gap: var(--space-md);
-    padding: var(--space-lg);
+    padding: var(--space-md);
   }
 
   .splash-container .logo {
     width: 250px;
+    max-width: 70vw;
   }
 
   .text-container {
-    font-size: 40px;
+    font-size: clamp(28px, 5vw, 50px);
+    gap: 0.1em;
+    max-width: 95vw;
   }
 }

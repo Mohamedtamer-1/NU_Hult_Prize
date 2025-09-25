@@ -5,9 +5,14 @@
   padding: 120px 0 80px;
   text-align: center;
   background:
-    radial-gradient(900px 420px at 15% 25%, rgba(119, 10, 241, 0.25), transparent 60%),
-    radial-gradient(700px 360px at 85% 35%, rgba(230, 7, 126, 0.25), transparent 60%),
-    linear-gradient(180deg, var(--brand-1) 0%, var(--brand-8) 100%);
+    radial-gradient(1100px 550px at 5% 20%, rgba(230, 7, 126, 0.45), transparent 70%),
+    radial-gradient(800px 400px at 25% 10%, rgba(230, 6, 125, 0.35), transparent 65%),
+    radial-gradient(700px 350px at 75% 30%, rgba(231, 7, 127, 0.30), transparent 60%),
+    radial-gradient(600px 300px at 90% 55%, rgba(228, 6, 124, 0.25), transparent 55%),
+    radial-gradient(900px 450px at 65% 70%, rgba(255, 215, 0, 0.18), transparent 65%),
+    radial-gradient(800px 400px at 15% 75%, rgba(80, 18, 104, 0.40), transparent 65%),
+    radial-gradient(600px 300px at 85% 80%, rgba(40, 16, 94, 0.35), transparent 60%),
+    linear-gradient(180deg, #22004c 0%, #100d52 50%, #28105e 100%);
 }
 
 /* Archive Section */
@@ -180,9 +185,13 @@
 .resources-section {
   padding: var(--section-padding);
   background:
-    radial-gradient(700px 320px at 75% 20%, rgba(119, 10, 241, 0.20), transparent 60%),
-    radial-gradient(600px 280px at 20% 70%, rgba(82, 18, 105, 0.22), transparent 60%),
-    linear-gradient(180deg, rgba(16, 13, 82, 0.6), rgba(16, 13, 82, 0.2));
+    radial-gradient(800px 400px at 20% 15%, rgba(230, 7, 126, 0.40), transparent 70%),
+    radial-gradient(600px 300px at 40% 5%, rgba(230, 6, 125, 0.30), transparent 65%),
+    radial-gradient(700px 350px at 75% 25%, rgba(231, 7, 127, 0.25), transparent 60%),
+    radial-gradient(500px 250px at 90% 60%, rgba(228, 6, 124, 0.20), transparent 55%),
+    radial-gradient(600px 300px at 15% 80%, rgba(80, 18, 104, 0.35), transparent 65%),
+    radial-gradient(500px 250px at 80% 85%, rgba(40, 16, 94, 0.30), transparent 60%),
+    linear-gradient(180deg, rgba(16, 13, 82, 0.4), rgba(16, 13, 82, 0.1));
 }
 
 .resources-grid {

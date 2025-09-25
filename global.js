@@ -6,9 +6,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Check if user prefers reduced motion or is on mobile
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  const isMobile = window.innerWidth <= 768 || "ontouchstart" in window
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+  const smallViewport = window.innerWidth <= 768
 
-  if (cursor && cursorFollower && !prefersReducedMotion && !isMobile) {
+  if (cursor && cursorFollower && !prefersReducedMotion && !isTouchDevice) {
+    // Animated cursor colors blending through brand magentas/purples
+    const cursorColors = [
+      getComputedStyle(document.documentElement).getPropertyValue('--brand-11').trim() || '#e6077e',
+      getComputedStyle(document.documentElement).getPropertyValue('--brand-12').trim() || '#e5067d',
+      getComputedStyle(document.documentElement).getPropertyValue('--brand-13').trim() || '#e7077f',
+      getComputedStyle(document.documentElement).getPropertyValue('--brand-14').trim() || '#e4067c'
+    ]
+    let colorIndex = 0
+    function cycleCursorColor() {
+      const next = cursorColors[colorIndex % cursorColors.length]
+      const glow = next + '4D' // ~30% alpha for box-shadow (hex with alpha)
+      cursor.style.borderColor = next
+      cursor.style.backgroundColor = next + '26' // ~15% alpha
+      cursor.style.boxShadow = `0 0 12px 4px ${glow}`
+      cursorFollower.style.backgroundColor = next
+      cursorFollower.style.boxShadow = `0 0 10px 3px ${glow}`
+      colorIndex++
+    }
+    cycleCursorColor()
+    setInterval(cycleCursorColor, 1200)
     let mouseX = 0
     let mouseY = 0
     let followerX = 0
@@ -24,8 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Smooth follower animation with requestAnimationFrame
     function animateFollower() {
-      followerX += (mouseX - followerX) * 0.1
-      followerY += (mouseY - followerY) * 0.1
+      const easing = smallViewport ? 0.18 : 0.1
+      followerX += (mouseX - followerX) * easing
+      followerY += (mouseY - followerY) * easing
 
       cursorFollower.style.left = followerX + "px"
       cursorFollower.style.top = followerY + "px"
@@ -38,13 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     interactiveElements.forEach((element) => {
       element.addEventListener("mouseenter", () => {
-        cursor.style.transform = "scale(1.5)"
-        cursor.style.borderColor = "var(--primary-red)"
+        cursor.style.transform = smallViewport ? "scale(1.3)" : "scale(1.5)"
       })
 
       element.addEventListener("mouseleave", () => {
         cursor.style.transform = "scale(1)"
-        cursor.style.borderColor = "var(--primary-red)"
       })
     })
   } else {
@@ -160,13 +180,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateNavbar() {
       const scrollY = window.scrollY
 
-      if (scrollY > 100) {
-        navbar.style.backgroundColor = "rgba(26, 26, 26, 0.98)"
-        navbar.style.backdropFilter = "blur(15px)"
-      } else {
-        navbar.style.backgroundColor = "rgba(26, 26, 26, 0.95)"
-        navbar.style.backdropFilter = "blur(10px)"
-      }
+      // Use CSS-defined gradient; only adjust blur intensity on scroll
+      const blur = scrollY > 100 ? 15 : 10
+      navbar.style.backdropFilter = `blur(${blur}px)`
 
       ticking = false
     }
