@@ -4,13 +4,16 @@
 .competitions-hero {
   padding: 120px 0 80px;
   text-align: center;
-  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+  background:
+    radial-gradient(800px 400px at 20% 20%, rgba(119, 10, 241, 0.25), transparent 60%),
+    radial-gradient(700px 360px at 80% 30%, rgba(230, 7, 126, 0.25), transparent 60%),
+    linear-gradient(180deg, var(--brand-1) 0%, var(--brand-8) 100%);
 }
 
 /* Current Competition Highlight */
 .current-competition {
   padding: 60px 0;
-  background-color: rgba(165, 28, 48, 0.1);
+  background-color: rgba(119, 10, 241, 0.1);
 }
 
 .competition-highlight {
@@ -21,7 +24,7 @@
 
 .competition-badge {
   display: inline-block;
-  background-color: var(--primary-red);
+  background-color: var(--brand-11);
   color: var(--text-white);
   padding: 8px 16px;
   border-radius: 20px;
@@ -145,7 +148,7 @@
 
 .accordion-icon {
   font-size: 1.5rem;
-  color: var(--primary-red);
+  color: var(--brand-11);
   font-weight: bold;
   transition: transform 0.3s ease;
 }
@@ -176,7 +179,7 @@
 }
 
 .detail-section h4 {
-  color: var(--primary-red);
+  color: var(--brand-11);
   font-size: 1.1rem;
   margin-bottom: 1rem;
   font-weight: var(--font-weight-semibold);
@@ -203,7 +206,7 @@
 
 .detail-section li::before {
   content: "•";
-  color: var(--primary-red);
+  color: var(--brand-11);
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -225,7 +228,7 @@
 }
 
 .register-btn {
-  background-color: var(--primary-red);
+  background-color: var(--brand-11);
   color: var(--text-white);
   padding: 12px 32px;
   border: none;
@@ -237,7 +240,7 @@
 }
 
 .register-btn:hover {
-  background-color: #8b1a2b;
+  background-color: var(--primary-red-hover);
   transform: translateY(-2px);
 }
 

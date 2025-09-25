@@ -4,7 +4,10 @@
 .library-hero {
   padding: 120px 0 80px;
   text-align: center;
-  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+  background:
+    radial-gradient(900px 420px at 15% 25%, rgba(119, 10, 241, 0.25), transparent 60%),
+    radial-gradient(700px 360px at 85% 35%, rgba(230, 7, 126, 0.25), transparent 60%),
+    linear-gradient(180deg, var(--brand-1) 0%, var(--brand-8) 100%);
 }
 
 /* Archive Section */
@@ -66,7 +69,7 @@
 
 .season-theme {
   font-size: 1.25rem;
-  color: var(--primary-red);
+  color: var(--brand-11);
   font-weight: var(--font-weight-medium);
 }
 
@@ -97,7 +100,7 @@
 }
 
 .participants {
-  color: var(--primary-red) !important;
+  color: var(--brand-11) !important;
 }
 
 .season-article p {
@@ -107,7 +110,7 @@
 }
 
 .highlights {
-  background-color: rgba(165, 28, 48, 0.1);
+  background-color: rgba(119, 10, 241, 0.1);
   border-left: 4px solid var(--primary-red);
   padding: 1.5rem;
   margin: 2rem 0;
@@ -134,7 +137,7 @@
 
 .highlights li::before {
   content: "→";
-  color: var(--primary-red);
+  color: var(--brand-11);
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -176,7 +179,10 @@
 /* Resources Section */
 .resources-section {
   padding: var(--section-padding);
-  background-color: var(--darker-bg);
+  background:
+    radial-gradient(700px 320px at 75% 20%, rgba(119, 10, 241, 0.20), transparent 60%),
+    radial-gradient(600px 280px at 20% 70%, rgba(82, 18, 105, 0.22), transparent 60%),
+    linear-gradient(180deg, rgba(16, 13, 82, 0.6), rgba(16, 13, 82, 0.2));
 }
 
 .resources-grid {
@@ -212,14 +218,14 @@
 }
 
 .resource-link {
-  color: var(--primary-red);
+  color: var(--brand-11);
   text-decoration: none;
   font-weight: var(--font-weight-semibold);
   transition: color 0.3s ease;
 }
 
 .resource-link:hover {
-  color: #8b1a2b;
+  color: var(--brand-12);
 }
 
 /* Responsive Design for Library Page */

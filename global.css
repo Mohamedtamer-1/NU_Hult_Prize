@@ -6,11 +6,27 @@
 }
 
 :root {
-  /* Improved color system with better contrast and accessibility */
-  --primary-red: #a51c30;
-  --primary-red-hover: #8b1a2b;
-  --dark-bg: #1a1a1a;
-  --darker-bg: #0f0f0f;
+  /* Brand Palette - Purple & Magenta */
+  --brand-1: #22004c; /* deep purple */
+  --brand-2: #770af1; /* bright purple */
+  --brand-3: #760cf5;
+  --brand-4: #22004d;
+  --brand-5: #7506e9;
+  --brand-6: #501268;
+  --brand-7: #28105e;
+  --brand-8: #100d52;
+  --brand-9: #511168;
+  --brand-10: #521269;
+  --brand-11: #e6077e; /* magenta */
+  --brand-12: #e5067d;
+  --brand-13: #e7077f;
+  --brand-14: #e4067c;
+
+  /* Semantic Tokens mapped to brand */
+  --primary-red: var(--brand-2);
+  --primary-red-hover: var(--brand-3);
+  --dark-bg: var(--brand-1);
+  --darker-bg: var(--brand-8);
   --text-white: #ffffff;
   --text-gray: #e5e5e5;
   --text-light-gray: #a3a3a3;
@@ -50,6 +66,65 @@
   --transition-slow: 0.5s ease;
 }
 
+/* Accent (Magenta) utilities and components */
+.btn-accent {
+  background-color: var(--brand-11);
+  color: var(--text-white);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.btn-accent:hover { background-color: var(--brand-12); transform: translateY(-2px); }
+.btn-accent:active { transform: translateY(0); }
+.btn-accent:focus { outline: var(--focus-ring); outline-offset: var(--focus-offset); }
+
+.btn-outline-accent {
+  background-color: transparent;
+  color: var(--brand-11);
+  padding: 12px 24px;
+  border: 2px solid var(--brand-11);
+  border-radius: 8px;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.btn-outline-accent:hover { color: var(--text-white); background-color: var(--brand-11); }
+.btn-outline-accent:focus { outline: var(--focus-ring); outline-offset: var(--focus-offset); }
+
+/* Small UI elements */
+.badge, .tag, .chip, .pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+}
+
+.badge-accent { background-color: var(--brand-13); color: var(--text-white); }
+.tag-accent { background-color: rgba(230, 7, 126, 0.15); color: var(--brand-11); }
+.chip-accent { background-color: rgba(230, 7, 126, 0.12); color: var(--brand-11); }
+.pill-accent { background-color: rgba(230, 7, 126, 0.18); color: var(--text-white); }
+
+/* Accent links */
+.link-accent { color: var(--brand-11); text-decoration: none; transition: color var(--transition-normal); }
+.link-accent:hover { color: var(--brand-12); }
+
 /* Added reduced motion support for accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -64,7 +139,11 @@
 
 body {
   font-family: var(--font-primary);
-  background-color: var(--dark-bg);
+  background:
+    radial-gradient(1200px 600px at 10% 10%, rgba(119, 10, 241, 0.25), transparent 60%),
+    radial-gradient(900px 500px at 80% 20%, rgba(230, 7, 126, 0.30), transparent 55%),
+    radial-gradient(700px 400px at 30% 80%, rgba(82, 18, 105, 0.35), transparent 55%),
+    linear-gradient(180deg, var(--brand-1) 0%, var(--brand-8) 100%);
   color: var(--text-white);
   line-height: 1.6; /* Improved line height for readability */
   overflow-x: hidden;
@@ -130,7 +209,9 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(26, 26, 26, 0.95);
+  background:
+    linear-gradient(180deg, rgba(16, 13, 82, 0.85), rgba(16, 13, 82, 0.65)),
+    radial-gradient(400px 200px at 80% -20%, rgba(230, 7, 126, 0.22), transparent 60%);
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding: var(--space-sm) 0;
@@ -319,7 +400,7 @@ h6 {
 }
 
 .cta-button {
-  background: linear-gradient(135deg, var(--primary-red), var(--primary-red-hover));
+  background: linear-gradient(135deg, var(--brand-11), var(--brand-12));
   color: var(--text-white);
   padding: 16px 32px;
   border: none;
@@ -336,7 +417,7 @@ h6 {
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(165, 28, 48, 0.3);
+  box-shadow: 0 10px 25px rgba(230, 7, 126, 0.3);
 }
 
 .cta-button:focus {
@@ -358,7 +439,10 @@ h6 {
 
 /* Footer - Improved footer accessibility */
 .footer {
-  background-color: var(--darker-bg);
+  background:
+    radial-gradient(800px 380px at 15% 0%, rgba(119, 10, 241, 0.18), transparent 60%),
+    radial-gradient(700px 320px at 85% 10%, rgba(82, 18, 105, 0.22), transparent 60%),
+    linear-gradient(180deg, rgba(16, 13, 82, 0.7), rgba(16, 13, 82, 0.6));
   padding: var(--space-xl) 0 var(--space-sm);
   margin-top: var(--space-2xl);
 }
@@ -425,7 +509,7 @@ h6 {
 
 .social-links a:hover {
   color: var(--primary-red);
-  background-color: rgba(165, 28, 48, 0.1);
+  background-color: rgba(119, 10, 241, 0.1);
   transform: translateY(-2px);
 }
 
